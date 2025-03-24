@@ -25,6 +25,9 @@ public class UIMainMenu : ButtonBehaviour
     [Header("캐릭터 사진 칸")]
     public Image charImage;
 
+    [Header("경험치 슬라이더")]
+    public Slider expSlider;
+
 
     //버튼 디스플레이의 원래 위치
     public Vector3 buttonDisplayPos;
@@ -58,6 +61,11 @@ public class UIMainMenu : ButtonBehaviour
         charLevelTxt.text = ch.Level.ToString();
         charDescription.text = ch.CharDescription;
         charImage.sprite = ch.CharImage;
+        charExpTxt.text = ch.Experience.ToString();
+        charMaxExpTxt.text = ch.MaxExperience.ToString();
+
+        expSlider.maxValue = ch.MaxExperience;
+        expSlider.value = ch.Experience;
     }
 
 }
