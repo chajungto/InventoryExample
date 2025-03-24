@@ -21,7 +21,7 @@ MonoBehaviour:
   level: 1234
   experience: 4
   maxExperience: 12
-  attack: 143
-  defense: 32
+  attack: 100
+  defense: 100
   health: 100
   crit: 25
