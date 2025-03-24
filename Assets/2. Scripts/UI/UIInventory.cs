@@ -1,9 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UIInventory : ButtonBehaviour
 {
+    [Header("UISlot의 프리팹")]
+    public GameObject slot;
+
+    //[Header("아이템들")]
+
+    [Header("UISlot이 생성될 곳")]
+    public GameObject content;
+
+    [Header("UISlot 개수")]
+    public int slotCount;
+
     [Header("인벤토리 디스플레이")]
     public RectTransform invenDisplay;
 
@@ -12,7 +21,9 @@ public class UIInventory : ButtonBehaviour
 
     protected override void Start()
     {
+        slotCount = 5;
         invenDisplayPos = invenDisplay.anchoredPosition;
+        InitInventoryUI(slotCount);
     }
 
     public void OpenMainMenu()
@@ -21,8 +32,12 @@ public class UIInventory : ButtonBehaviour
         MoveDisplay(UIManager.Instance.MainMenu.buttonDisplay, UIManager.Instance.MainMenu.buttonDisplayPos, 0.5f);
     }
 
-    protected override void MoveDisplay(RectTransform display, Vector3 vector, float time)
+    void InitInventoryUI(int count)
     {
-        base.MoveDisplay(display, vector, time);
+        for(int i = 0; i < count; i++)
+        {
+            GameObject newSlot = Instantiate(slot, content.transform);
+        }
     }
+
 }

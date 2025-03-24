@@ -49,11 +49,6 @@ public class UIMainMenu : ButtonBehaviour
         MoveDisplay(buttonDisplay, UIManager.Instance.Inventory.invenDisplayPos, 0.5f);
     }
 
-    protected override void MoveDisplay(RectTransform display, Vector3 vector, float time)
-    {
-        base.MoveDisplay(display, vector, time);
-    }
-
     public void SetData()
     {
         Character ch = GameManager.Instance.Character;
@@ -67,5 +62,4 @@ public class UIMainMenu : ButtonBehaviour
         expSlider.maxValue = ch.MaxExperience;
         expSlider.value = ch.Experience;
     }
-
 }
