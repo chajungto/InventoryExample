@@ -19,7 +19,10 @@ public class GameManager : Singleton<GameManager>
 
         _instance = this;
         DontDestroyOnLoad(gameObject);
+    }
 
+    private void Update()
+    {
         SetData();
     }
 

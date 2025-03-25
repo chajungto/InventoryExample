@@ -35,9 +35,9 @@ public class UIStatus : ButtonBehaviour
     public void SetData()
     {
         Character ch = GameManager.Instance.Character;
-        attackTxt.text = ch.Attack.ToString();
-        defenseTxt.text = ch.Defense.ToString();
-        healthTxt.text = ch.Health.ToString();
-        critTxt.text = ch.Crit.ToString();
+        attackTxt.text = ch.attack.ToString();
+        defenseTxt.text = ch.defense.ToString();
+        healthTxt.text = ch.health.ToString();
+        critTxt.text = ch.crit.ToString();
     }
 }

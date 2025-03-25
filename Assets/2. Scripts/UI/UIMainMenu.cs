@@ -52,14 +52,14 @@ public class UIMainMenu : ButtonBehaviour
     public void SetData()
     {
         Character ch = GameManager.Instance.Character;
-        charNameTxt.text = ch.CharName;
-        charLevelTxt.text = ch.Level.ToString();
-        charDescription.text = ch.CharDescription;
-        charImage.sprite = ch.CharImage;
-        charExpTxt.text = ch.Experience.ToString();
-        charMaxExpTxt.text = ch.MaxExperience.ToString();
+        charNameTxt.text = ch.charName;
+        charLevelTxt.text = ch.level.ToString();
+        charDescription.text = ch.charDescription;
+        charImage.sprite = ch.charImage;
+        charExpTxt.text = ch.experience.ToString();
+        charMaxExpTxt.text = ch.maxExperience.ToString();
 
-        expSlider.maxValue = ch.MaxExperience;
-        expSlider.value = ch.Experience;
+        expSlider.maxValue = ch.maxExperience;
+        expSlider.value = ch.experience;
     }
 }

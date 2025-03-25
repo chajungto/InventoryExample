@@ -10,18 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5b7a0625ae5ae84f9f68b5fecffd3eb, type: 3}
-  m_Name: Character
+  m_Name: CharacterInfo
   m_EditorClassIdentifier: 
   charName: "\uC0AD\uC640"
   charImage: {fileID: -3989417037294542392, guid: dc095ce8d2086f541bd26c7e3a71ef12, type: 3}
-  charDescription: "\uACC1\uC73C\uB85C \uBCF4\uAE30\uC5D0\uB294 \uC0AC\uACFC\uC774\uC9C0\uB9CC,
-    \uC18D\uC73C\uB85C \uBD10\uB3C4 \uC0AC\uACFC\uC784\uC5D0 \uD2C0\uB9BC\uC5C6\uB294
-    \uC815\uBCF4\uC5D0 \uB300\uD55C \uC0AC\uC2E4\uC801 \uAE30\uBC18\uC774 \uC218\uBC18\uB418\uC5B4
-    \uC788\uB2E4."
-  level: 1234
-  experience: 4
-  maxExperience: 12
+  charDescription: "\uCDA9\uC8FC\uC0B0\uC774\uB2E4"
+  level: 2
+  experience: 2
+  maxExperience: 5
   attack: 100
   defense: 100
-  health: 100
+  health: 200
   crit: 25

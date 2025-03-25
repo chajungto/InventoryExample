@@ -1,8 +1,8 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Character", menuName = "Character", order = int.MaxValue)]
+[CreateAssetMenu(fileName = "CharacterInfo", menuName = "CharacterInfo", order = int.MaxValue)]
 
-public class Character : ScriptableObject
+public class CharacterInfo : ScriptableObject
 {
     [Header("캐릭터 이름")]
     [SerializeField]

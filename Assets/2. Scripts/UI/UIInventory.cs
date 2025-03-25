@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UIInventory : ButtonBehaviour
@@ -5,7 +6,8 @@ public class UIInventory : ButtonBehaviour
     [Header("UISlot의 프리팹")]
     public GameObject slot;
 
-    //[Header("아이템들")]
+    [Header("아이템들")]
+    public List<ItemInfo> itemList;
 
     [Header("UISlot이 생성될 곳")]
     public GameObject content;
@@ -19,9 +21,11 @@ public class UIInventory : ButtonBehaviour
     //버튼 디스플레이의 원래 위치
     public Vector3 invenDisplayPos;
 
+    private int maxSlotCount = 10;
+
     protected override void Start()
     {
-        slotCount = 5;
+        slotCount = 0;
         invenDisplayPos = invenDisplay.anchoredPosition;
         InitInventoryUI(slotCount);
     }
@@ -39,5 +43,17 @@ public class UIInventory : ButtonBehaviour
             GameObject newSlot = Instantiate(slot, content.transform);
         }
     }
+
+    public ItemInfo NewItem()
+    {
+        if (slotCount >= maxSlotCount) return null;
+
+        ItemInfo reutrnItem = itemList[slotCount];
+        slot.GetComponent<UISlot>().item = reutrnItem;
+        Instantiate(slot, content.transform);
+        slotCount++;
+        return reutrnItem;
+    }
+
 
 }
