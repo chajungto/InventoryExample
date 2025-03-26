@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "ItemInfo", menuName = "ItemInfo", order = int.MaxValue)]
 

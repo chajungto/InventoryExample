@@ -53,7 +53,7 @@ public class Character : MonoBehaviour
 
         inventory = new List<ItemInfo>();
     }
-
+    //아이템 얻기 (??)
     public void AddItem()
     {
         inventory.Add(UIManager.Instance.Inventory.NewItem());

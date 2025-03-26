@@ -25,7 +25,7 @@ public class GameManager : Singleton<GameManager>
     {
         SetData();
     }
-
+    //데이터 설정
     void SetData()
     {
         UIManager.MainMenu.SetData();

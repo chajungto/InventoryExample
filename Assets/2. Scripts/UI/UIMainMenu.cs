@@ -37,18 +37,21 @@ public class UIMainMenu : ButtonBehaviour
         buttonDisplayPos = buttonDisplay.anchoredPosition;
     }
 
+    //스탯 창 열기
     public void OpenStatus()
     {
         MoveDisplay(UIManager.Instance.Status.statDisplay, buttonDisplayPos, 0.5f);
         MoveDisplay(buttonDisplay, UIManager.Instance.Status.statDisplayPos, 0.5f);
     }
 
+    //인벤토리 열기
     public void OpenInventory()
     {
         MoveDisplay(UIManager.Instance.Inventory.invenDisplay, buttonDisplayPos, 0.5f);
         MoveDisplay(buttonDisplay, UIManager.Instance.Inventory.invenDisplayPos, 0.5f);
     }
 
+    //데이터 설정
     public void SetData()
     {
         Character ch = GameManager.Instance.Character;

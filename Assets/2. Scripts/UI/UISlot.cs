@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +12,7 @@ public class UISlot : MonoBehaviour
     [Header("체크 표시")]
     public GameObject checkImage;
 
-    [Header("아이템 사진 칸")]
+    [Header("해당 슬롯의 아이템 착용 여부")]
     public bool isEquipped;
 
     private void Start()
@@ -38,7 +37,7 @@ public class UISlot : MonoBehaviour
             checkImage.SetActive(false);
         }
     }
-
+    //아이템 효과 적용
     public void ApplyEffect()
     {
         GameManager.Instance.Character.attack += item.ItemAttack;
@@ -46,7 +45,7 @@ public class UISlot : MonoBehaviour
         GameManager.Instance.Character.health += item.ItemHealth;
         GameManager.Instance.Character.crit += item.ItemCrit;
     }
-
+    //아이템 효과 미적용
     public void LoseEffect()
     {
         GameManager.Instance.Character.attack -= item.ItemAttack;
@@ -54,13 +53,4 @@ public class UISlot : MonoBehaviour
         GameManager.Instance.Character.health -= item.ItemHealth;
         GameManager.Instance.Character.crit -= item.ItemCrit;
     }
-
-    //public void UnEquip()
-    //{
-    //    if (isEquipped)
-    //    {
-    //        isEquipped = false;
-    //        checkImage.SetActive(false);
-    //    }
-    //}
 }

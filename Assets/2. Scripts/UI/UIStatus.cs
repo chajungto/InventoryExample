@@ -25,13 +25,13 @@ public class UIStatus : ButtonBehaviour
     {
         statDisplayPos = statDisplay.anchoredPosition;
     }
-
+    //메인 메뉴 열기
     public void OpenMainMenu()
     {
         MoveDisplay(statDisplay, statDisplayPos, 0.5f);
         MoveDisplay(UIManager.Instance.MainMenu.buttonDisplay, UIManager.Instance.MainMenu.buttonDisplayPos, 0.5f);
     }
-
+    //데이터 설정
     public void SetData()
     {
         Character ch = GameManager.Instance.Character;
