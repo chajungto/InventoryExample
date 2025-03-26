@@ -21,8 +21,6 @@ public class UIInventory : ButtonBehaviour
     //버튼 디스플레이의 원래 위치
     public Vector3 invenDisplayPos;
 
-    private int maxSlotCount = 10;
-
     protected override void Start()
     {
         slotCount = 0;
@@ -43,10 +41,10 @@ public class UIInventory : ButtonBehaviour
             GameObject newSlot = Instantiate(slot, content.transform);
         }
     }
-    //아이템 개수가 10개이므로 10개까지만 동적 생성 가능하도록 설정 -> Additem에서 호출
+    //아이템 개수가 10개이므로 10개까지만 동적 생성 가능하도록 설정(리스트 추가 가능) -> Additem에서 호출
     public ItemInfo NewItem()
     {
-        if (slotCount >= maxSlotCount) return null;
+        if (slotCount >= itemList.Count) return null;
 
         ItemInfo reutrnItem = itemList[slotCount];
         slot.GetComponent<UISlot>().item = reutrnItem;
